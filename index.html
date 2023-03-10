@@ -9,6 +9,10 @@
          .green{
             color:rgb(139, 236, 139)
         }
+        .containerDiv{
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -18,8 +22,9 @@
         const key = document.createElement('div')
         const keyCode = document.createElement('div')
         let input = document.querySelector("input")
-        console.log("hiii")
-
+        let containerDiv = document.createElement('div')
+        containerDiv.className = 'containerDiv'
+        body.appendChild(containerDiv)
         // styling
         key.style.padding = '4px'
         key.textContent = 'Press any keyboard key'
@@ -30,7 +35,7 @@
         key.style.fontWeight = 'bold'
         key.style.border = '2px solid grey'
         key.style.textAlign = 'center'
-        body.appendChild(key)
+        containerDiv.appendChild(key)
 
         
 
